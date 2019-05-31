@@ -18,11 +18,15 @@
 	
 	<!-- CABEÇALHO -->
 	<header class="cabecalho container colorTop" >
-		<a href="index.html"><img class="logo" src="images/fotos/logo2.png"></a>
-        <button id="btn-menu" onclick="abreMenu()"><i class="fas fa-bars"></i></button>
-		<nav id="menu">
-	       <button id="btn-fechar" onclick="fechaMenu()"><i class="fas fa-times"></i></button>
-            <ul>                
+
+		<a href="index.html"><img class="logo" src="images/fotos/logo2.png"></a><!--LOGO Do Menu-->
+
+        <button id="btn-menu" onclick="abreMenu()"><i class="fas fa-bars"></i></button><!--Botão Abre Sanduiche-->
+
+		<nav id="menu"><!--Botões de Navegação-->
+
+	       <button id="btn-fechar" onclick="fechaMenu()"><i class="fas fa-times"></i></button><!--Botão Fecha Sanduiche-->
+            <ul>                <!--MENUS-->
 	            <li>
                     <a id="inicio1" style="cursor: pointer;">Home</a>
                 </li>
@@ -42,13 +46,15 @@
 	<!-- BANNER -->
 	<section class="banner container">
         <article>
-           <div class="image">
-               <div class="slide1">
+        							<!--SLIDER-->
+           <div class="image"> 
+
+               <div class="slide1"><!--BOTAO LEFT-->
 				   <a onclick="pleft()">
 					   <i class="far fa-arrow-alt-circle-left"></i>
 				   </a>
 			   </div>
-                <div class="slide2">
+                <div class="slide2"> <!--BOTAO RIGHT-->
 					<a onclick="pright()">
 						<i class="far fa-arrow-alt-circle-right"></i>
 					</a>
@@ -60,7 +66,7 @@
     
     <!--SOBRE-->
     <section class="container colorSobre sobre">
-        <article id="sobre2">
+        <article id="sobre2"><!--O ID Serve apenas para o funcionamento do Menu como ancora-->
             <h1>            
             Na Sant' Ana você encontra uma grande variedade de doces, salgados, pães, bolos, tortas salgadas, tortas doces, patês e muitos outros podutos, tudo feito com muito carinho e cuidado. Venha conhecer essas delícias!</h1>
         </article>
@@ -72,29 +78,30 @@
 
     <!--PRODUTOS-->
 		<section class="produtos container corProdutos">
-            <h1 id="produtos2" style="font-size: 250%;">PRODUTOS</h1>
+            <h1 id="produtos2" style="font-size: 250%;">PRODUTOS</h1> <!--TITULO-->
         
-            <article class="produto" id="confeitaria">            
+            <article class="produto" id="confeitaria">      <!--Responsavel por mostrar a lista da confeitaria-->      
                 <div class="inner">
                     <a onclick="conf()"><h3>Confeitaria</h3></a>
                 </div>
                 <a onclick="conf()"><img src="images/fotos/img1.jpg"></a>
             </article>
 		
-             <article class="produto" id="panificadora">            
+             <article class="produto" id="panificadora">   <!--Responsavel por mostrar a lista da panificadora-->         
                 <div class="inner">
                     <a onclick="pani()"><h3>Panificadora</h3></a>
                 </div>
                 <a onclick="pani()"><img src="images/fotos/img2.jpg"></a>
             </article>
 		           
-             <article class="produto" id="lanches">            
+             <article class="produto" id="lanches">         <!--Responsavel por mostrar a lista de lanches-->
                 <div class="inner">
                     <a onclick="lanc()"><h3>Lanches</h3></a>
                 </div>
                 <a onclick="lanc()"><img src="images/fotos/lanche.jpg"></a>
             </article>
 	</section>
+							<!--Section COM TODOS OS PRODUTOS DA Confeitaria-->
 	<section class="produtos container corProdutos conf">
             <article class="prod conf" id="conf1">
                 <img src="images/fotos/torta%20alema.jpg">
@@ -125,7 +132,7 @@
                 </div>
             </article>
 	</section>
-	
+							<!--Section COM TODOS OS PRODUTOS DA PANIFICADORA-->
 	<section class="produtos container corProdutos panif"> 
 		<article class="prod panif" id="panif1">
 			<img src="images/fotos/pao%20fatiado.jpg">
@@ -156,7 +163,7 @@
 			</div>
 		</article>
 	</section >
-	
+							<!--Section COM TODOS OS PRODUTOS DOS LANCHES-->
 	<section class="produtos container corProdutos lanche"> 
 		<article class="prod lanches" id="lanc1">
 			<img src="images/fotos/lanches/mistinho.jpg">
@@ -251,15 +258,14 @@
     <!--ENDERECO-->
     <section class="endereco container colorEndereco" id="contatos2">
         <article>
-             <h1>Endereço</h1>
+             <h1>Endereço</h1>					<!--Google maps api pega em www.embedGoogleMap.net-->
 		<div class="map"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=%201526%20R.%20Mal.%20Deodoro%20Conc%C3%B3rdia%2C%20Santa%20Catarina&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
-<!--	www.embedGoogleMap.net-->
         </article>    
     </section>
     
     <!------------>
     
-    <!-- RODAPÉ -->
+    <!-- RODAPÉ -->									<!--CADA <a> TEM UM ICONE PNG COMO PADRÃO E COM A PRESENÇA DO MOUSER EM CIMA ELE MUDA A IMG-->
     <footer class="rodape container colorFooter">
               
 		<h1 id="contatos2">CONTATENOS E FAÇA SEU PEDIDO VIA WHATSAPP</h1>
@@ -270,11 +276,12 @@
 
             <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5549991632082" 
             target="_blank"><img src="images/icones/whats-ico1.png" onmouseleave="this.src='images/icones/whats-ico1.png'" onmouseover="this.src='images/icones/whats-ico2.png'"></a>
+	<!--https://icons8.com.br ICONES-->
         </div>
 		
     </footer>
    
-    <div class="_fundo">
+    <div class="_fundo"> <!--AQUI É A PARTE QUE QUANDO CLICA EM UM PRODUTO ESPECIFICO IRA TORNAR UMA DIV E O FUNDO VISIVEL-->
         <div id="confi1" class="config">
             <i id="btn_confi1" class="far fa-times-circle"></i>
             <img src="images/fotos/torta%20alema.jpg">
@@ -416,10 +423,9 @@
             <h1></h1>
             <p></p>
             <h2>R$:</h2>
-        </div>g
+        </div>
 
     </div>
 	
 </body>
 </html>
-<!--https://icons8.com.br ICONES-->

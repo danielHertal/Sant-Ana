@@ -1,131 +1,137 @@
-let exec = false;
 
-$(document).on("scroll",function(){
-    if($(document).scrollTop()>50){ //QUANDO O SCROLL PASSAR DOS 100px DO TOPO
-        $(".logo").addClass("small_logo"); //TROCA P CLASSE MENOR
-        $(".cabecalho").addClass("small");
-        $("#menu").addClass("small_menu");
-        $("#inicio1").addClass("small_btn");
-        $("#sobre1").addClass("small_btn");
-        $("#produtos1").addClass("small_btn");
-        $("#contatos1").addClass("small_btn");
-    } else{
-        $(".logo").removeClass("small_logo")//VOLTA P MENU GRANDE ORIGINAL,
-        $(".cabecalho").removeClass("small");
-        $("#menu").removeClass("small_menu");
-        $("#inicio1").removeClass("small_btn");
-        $("#sobre1").removeClass("small_btn");
-        $("#produtos1").removeClass("small_btn");
-        $("#contatos1").removeClass("small_btn");
-    }
+$(document).on("scroll",function(){/*Animação do Menu*/
+	if($(window).width() > 768 ){ /*Aplicado somente a desktop*/
+		if($(document).scrollTop()>100){ /*QUANDO O SCROLL PASSAR DOS 100px DO TOPO*/
+	        $(".logo").addClass("small_logo"); /*TROCA P CLASSE MENOR*/
+	        $(".cabecalho").addClass("small");
+	        $("#menu").addClass("small_menu");
+	        $("#inicio1").addClass("small_btn");
+	        $("#sobre1").addClass("small_btn");
+	        $("#produtos1").addClass("small_btn");
+	        $("#contatos1").addClass("small_btn");
+    	} else{
+	        $(".logo").removeClass("small_logo")/*VOLTA P MENU ORIGINAL*/
+	        $(".cabecalho").removeClass("small");
+	        $("#menu").removeClass("small_menu");
+	        $("#inicio1").removeClass("small_btn");
+	        $("#sobre1").removeClass("small_btn");
+	        $("#produtos1").removeClass("small_btn");
+	        $("#contatos1").removeClass("small_btn");
+    	}
+	}    
 });
-$(document).ready(function(){
-	$("#inicio1").click(function(event) {
-		if(exec == false){
-			if($(window).width() <= 768){
-				$('#menu').hide();
-				$('#btn-menu').show();
+
+let exec = false; /*Variavel para controla On Off dos btn do menu [Controle Não visivel]*/
+$(document).ready(function(){/*Quando Documento html for lido*/
+
+	$("#inicio1").click(function(event) {/*Botao de scroll do HOME*/
+		if(exec == false){/*Controle de Tempo*/
+			if($(window).width() <= 768){/*Serve Para esconder o menu quando clicado*/
+				$('#menu').hide();/*Esconde Menu*/
+				$('#btn-menu').show();/*Mostra botao sanduiche*/
 			}
-			exec = true;
+			exec = true;/*variavel de controle*/
 			event.preventDefault();
     		var target_offset = $("body").offset();
 			var target_top = target_offset.top;
-			$('html, body').animate({ scrollTop: target_top }, 900);
-			setTimeout(atrasoAnimacao,500);
+			$('html, body').animate({ scrollTop: target_top }, 900);/*Animação do scroll*/	
+			setTimeout(atrasoAnimacao,500);/*Controle de 500ms*/
 		}    	
 	});
 
-	$("#produtos1").click(function(event) {
+	$("#produtos1").click(function(event) {/*Botão Produto do Menu*/
     	if(exec == false){
-			if($(window).width() <= 768){
-				$('#menu').hide();
-				$('#btn-menu').show();
+			if($(window).width() <= 768){/*Serve Para esconder o menu quando clicado*/
+				$('#menu').hide();/*Esconde Menu*/
+				$('#btn-menu').show();/*Mostra botao sanduiche*/
 			}
-			exec = true;
+			exec = true;/*variavel de controle*/
 			event.preventDefault();
     		var target_offset = $("#produtos2").offset();
 			var target_top = target_offset.top-220;
-			$('html, body').animate({ scrollTop: target_top }, 900);			
-			setTimeout(atrasoAnimacao,500);
+			$('html, body').animate({ scrollTop: target_top }, 900);/*Animação do scroll*/			
+			setTimeout(atrasoAnimacao,500);/*Controle de 500ms*/
 		}  
 	});
 
-	$("#sobre1").click(function(event) {
+	$("#sobre1").click(function(event) {/*Botão Sobre do Menu*/
 		if(exec == false){
-			if($(window).width() <= 768){
-				$('#menu').hide();
-				$('#btn-menu').show();
+			if($(window).width() <= 768){/*Serve Para esconder o menu quando clicado*/
+				$('#menu').hide();/*Esconde Menu*/
+				$('#btn-menu').show();/*Mostra botao sanduiche*/
 			}
-			exec = true;		
+			exec = true;		/*variavel de controle*/
     		event.preventDefault();
     		var target_offset = $("#sobre2").offset();
 			var target_top = target_offset.top-180;
-			$('html, body').animate({ scrollTop: target_top }, 900);
-			setTimeout(atrasoAnimacao,500);
+			$('html, body').animate({ scrollTop: target_top }, 900);/*Animação do scroll*/	
+			setTimeout(atrasoAnimacao,500);/*Controle de 500ms*/
 		}  
 	});
 
-    $("#contatos1").click(function(event) {
+    $("#contatos1").click(function(event) {/*Botão contatos do Menu*/
 		if(exec == false){
-			if($(window).width() <= 768){
-				$('#menu').hide();
-				$('#btn-menu').show();
+			if($(window).width() <= 768){/*Serve Para esconder o menu quando clicado*/
+				$('#menu').hide();/*Esconde Menu*/
+				$('#btn-menu').show();/*Mostra botao sanduiche*/
 			}
-			exec = true;		
+			exec = true;		/*variavel de controle*/
     		event.preventDefault();
     		var target_offset = $("#contatos2").offset();
 			var target_top = target_offset.top+200;
-			$('html, body').animate({ scrollTop: target_top }, 900);
-			setTimeout(atrasoAnimacao,500);
+			$('html, body').animate({ scrollTop: target_top }, 900);/*Animação do scroll*/	
+			setTimeout(atrasoAnimacao,500);/*Controle de 500ms*/
 		}  
 	});
 });
 
-function atrasoAnimacao(){
+function atrasoAnimacao(){/*Controle do Scroll*/
 	exec = false;
 }
-function fechaMenu(){
+
+function fechaMenu(){/*Ação para fechar menu sanduiche*/
 	$("#menu").hide();
 	$("#btn-menu").show();
 }
-function abreMenu(){
+function abreMenu(){/*Ação para abrir menu sanduiche*/
 	$("#menu").show();
 	$("#btn-menu").hide();
 }
 
-$(document).ready(function() {	
+$(document).ready(function() {	/*Fechar Menu Sanduiche quando abrir a pag*/
     if($(window).width() <= 768){
 		$("#btn-menu").show();
 		$("#menu").hide();
 	}
+	$(".prod").hide();/*Esconder produtos*/
 });
 
-setInterval(passar, 3500);
+setInterval(passar, 3500);/*Delay Do Slider*/
 
-var img = 1;
-var pas = true;
+var img = 1;/*Primeira Img*/
+var pas = true;/*Começar*/
 function passar(){  
     $(".image").css("background-image",
     "url(images/fotos/img"+img+".jpg)");
     
-    $(".image").mouseover(function(){
+    $(".image").mouseover(function(){/*Parar o Slider quando tiver o mouser em cima*/
         pas = false;
     });
-    $(".image").mouseleave(function(){
+    $(".image").mouseleave(function(){/*continuar passando o Slider*/
         pas = true;
     });
 	
     if(pas == true){
-       img++; 
-       if(img>6){
-		   img = 1;
+       img++; /*Proxima Img*/
+       if(img>6){/*Vai Até 6 Img caso queira mais tem q aumentar o valor*/
+		   img = 1;/*Voltara para a primeira img*/
        }
     }
     
     
 }
 
-function pleft(){
+function pleft(){/*voltar Img*/
 	if(img==1){
 		 $(".image").css("background-image",
     	"url(images/fotos/img6.jpg)");
@@ -147,7 +153,7 @@ function pleft(){
 	}
 }
 
-function pright(){
+function pright(){/*Proxima Img*/
 	if(img==1){
 		$(".image").css("background-image",
     	"url(images/fotos/img2.jpg)");
@@ -168,18 +174,14 @@ function pright(){
     	"url(images/fotos/img1.jpg)");
 	}
 }
-window.onload = function(){
-	$(".prod").hide();
-}
 
+/*Variaveis para controle das listas de lanches apenas uma das 3 podera estar ativada no mesmo tempo*/
+var confei = false; /*confeitaria desativado*/
+var panifi = false; /*panificadora desativado*/
+var lanch = false; /*Lanche desativado*/
 
-var confei = false; //confeitaria desativado
-var panifi = false; //panificadora desativado
-var lanch = false
-
-function conf(){
+function conf(){/*Mostrar ou Ocultar lista da Confeitaria*/
 	if(confei == true){
-		console.log('entro');
 		confei = false;
 		$(".conf").hide();
 		$("#confeitaria").removeClass("zoom");		
@@ -207,7 +209,7 @@ function conf(){
 	}	
 }
 
-function pani(){		
+function pani(){	/*Mostrar ou Ocultar lista da Panificadora*/	
 	if(panifi == true){
 		panifi = false;
 		$(".panif").hide();
@@ -236,7 +238,7 @@ function pani(){
 	}	
 }
 
-function lanc(){
+function lanc(){ /*Mostrar ou Ocultar lista dos Lanches*/
 	if(lanch == true){
 		lanch = false;
 		$(".lanches").hide();
@@ -265,7 +267,7 @@ function lanc(){
 	}
 }
 
-$(document).ready(function(){
+$(document).ready(function(){/*ANIMAÇÃO DE ZOOM NOS PRODUTOS*/
 	$("#confeitaria").mouseover(function(){
 		$("#confeitaria").addClass("prod_hover");
 	});
@@ -287,7 +289,8 @@ $(document).ready(function(){
 		$("#lanches").removeClass("prod_hover");
 	});
 	
-	/*-------------------------------------------------------*/
+	/*----------------------MUDAR COR DO BOTÃO DO MENU------------------------------*/
+	/*TIVE QUE FAZER POR JAVA SCRIPT PQ ELE N PERMITIA EU MUDAR DE COR QUANDO SEGURAVA CLICADO NO BOTAO*/
 	$("#inicio1").mouseover(function(){
 		$("#inicio1").addClass("btn_hover");
 	});
@@ -313,7 +316,8 @@ $(document).ready(function(){
 		$("#contatos1").removeClass("btn_hover");
 	});
 	
-	/*-------------------------------------------------------*/
+	/*------------------------MUDAR COR SEGURANDO O BOTAO----------------------------*/
+	/*ADICIONANDO A COR PRETA NOS BOTOES QUANDO PRECIONADO*/
 	$("#inicio1").mouseup(function(){
 		$("#inicio1").removeClass("btn_cor");
 		$("#inicio1").addClass("btn_hover");
@@ -347,6 +351,7 @@ $(document).ready(function(){
 	});
 	/*-------------------------------------------------------*/
 	
+	/*ADICIONANDO ANIMAÇÃO DE ZOOM AOS PRODUTOS*/
 	$("#conf1").mouseover(function(){
 		$("#conf1").addClass("prod_hover");
 	});
@@ -473,40 +478,41 @@ $(document).ready(function(){
 	/*----------------------------------------------*/
 	/*					Produtos					*/
 	/*----------------------------------------------*/
-	
+	/*ABRIR PRODUTOS*/
+
 	$("#conf1").click(function(){
 		$("._fundo").show();
 		$("#confi1").show();
 	});
-	// $("#conf2").click(function(){
-	// 	$("._fundo").show();
-	// 	$("#confi2").show();
-	// });
-	// $("#conf3").click(function(){
-	// 	$("._fundo").show();
-	// 	$("#confi3").show();
-	// });
-	// $("#conf4").click(function(){
-	// 	$("._fundo").show();
-	// 	$("#confi4").show();
-	// });
+/*  $("#conf2").click(function(){
+		$("._fundo").show();
+		$("#confi2").show();
+	});
+	$("#conf3").click(function(){
+		$("._fundo").show();
+		$("#confi3").show();
+	});
+	$("#conf4").click(function(){
+		$("._fundo").show();
+		$("#confi4").show();
+	});*/
 	
 	$("#panif1").click(function(){
 		$("._fundo").show();
 		$("#pani1").show();
 	});
-	// $("#conf2").click(function(){
-	// 	$("._fundo").show();
-	// 	$("#confi2").show();
-	// });
-	// $("#conf3").click(function(){
-	// 	$("._fundo").show();
-	// 	$("#confi3").show();
-	// });
-	// $("#conf4").click(function(){
-	// 	$("._fundo").show();
-	// 	$("#confi4").show();
- //    });
+/*	$("#conf2").click(function(){
+		$("._fundo").show();
+		$("#confi2").show();
+	});
+	$("#conf3").click(function(){
+		$("._fundo").show();
+		$("#confi3").show();
+	});
+	$("#conf4").click(function(){
+		$("._fundo").show();
+		$("#confi4").show();
+    });*/
 
     $('#lanc1').click(function () {
         $("._fundo").show();
@@ -559,6 +565,7 @@ $(document).ready(function(){
 	/*------------------------------------------*/
 	/*				Fexar produtos				*/
 	/*------------------------------------------*/
+	/*----------CONFEITARIA--------*/
 	$("#btn_confi1").click(function(){
 		$("._fundo").hide();
 		$("#confi1").hide();
@@ -575,7 +582,7 @@ $(document).ready(function(){
 		$("._fundo").hide();
 		$("#confi4").hide();
 	});
-	
+	/*----------PANIFICADORA--------*/
 	$("#btn_pani1").click(function(){
 		$("._fundo").hide();
 		$("#pani1").hide();
@@ -592,7 +599,7 @@ $(document).ready(function(){
 		$("._fundo").hide();
 		$("#confi4").hide();
 	});
-	/*---------------Lanches--------------------*/
+	/*------------Lanches------------*/
 	$("#btn_lanche1").click(function(){
 		$("._fundo").hide();
 		$("#lanche1").hide();
