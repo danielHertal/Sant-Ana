@@ -1,0 +1,7 @@
+Pastas:
+'images' Contem todos os arquivos de midia
+'style' contem todos os arquivos de reponsividade e estilo
+'index.html' arquivo html principal
+'script.js' arquivo com todo desemvolvimento do site 
+'slider' o slider tem um nome padrão para as imagens sendo img+num com sequencia, não sera adicionado automaticamente ao slider
+só colocando a imagem tem que mudar o contador no 'script.js'
