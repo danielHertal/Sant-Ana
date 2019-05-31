@@ -1,0 +1,25 @@
+.logo { 
+	width: 27%;
+	float: left; 
+	margin-top: 1%;
+	margin-left: 3%;
+}
+#menu{
+	width: 70%;
+	line-height: 8vw; 
+	margin-top: 3vw;
+}
+.banner{
+	margin-top: 20vw;	
+	height: 45vw;
+}
+.sobre h1{
+	font-size: 3vw;
+}
+.sobre p{
+	font-size: 2vw;
+}
+.produtos{
+	width: 100vw;
+	margin-left: 0;
+}

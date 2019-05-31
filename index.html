@@ -1,0 +1,425 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sant' Ana</title>
+	<link rel="shortcut icon" href="" >
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" type="text/css" href="styles/style480.css" media="(max-width: 480px)">
+	<link rel="stylesheet" type="text/css" href="styles/style768.css" media="(max-width: 768px)">
+	<link rel="stylesheet" type="text/css" href="styles/style834.css" media="(max-width: 834px)">
+	<link rel="stylesheet" type="text/css" href="styles/style960.css" media="(max-width: 960px)">
+	<script type="text/javascript" src="script.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body>
+	
+	<!-- CABEÇALHO -->
+	<header class="cabecalho container colorTop" >
+		<a href="index.html"><img class="logo" src="images/fotos/logo2.png"></a>
+        <button id="btn-menu" onclick="abreMenu()"><i class="fas fa-bars"></i></button>
+		<nav id="menu">
+	       <button id="btn-fechar" onclick="fechaMenu()"><i class="fas fa-times"></i></button>
+            <ul>                
+	            <li>
+                    <a id="inicio1" style="cursor: pointer;">Home</a>
+                </li>
+	            <li>
+                    <a id="produtos1" style="cursor: pointer;">Produtos</a>
+                </li>
+	            <li>
+                    <a id="sobre1" style="cursor: pointer;">Sobre</a>
+                </li>
+                <li>
+                    <a id="contatos1" style="cursor: pointer;">Contatos</a>
+                </li>
+	        </ul>
+		</nav>
+	</header>
+	
+	<!-- BANNER -->
+	<section class="banner container">
+        <article>
+           <div class="image">
+               <div class="slide1">
+				   <a onclick="pleft()">
+					   <i class="far fa-arrow-alt-circle-left"></i>
+				   </a>
+			   </div>
+                <div class="slide2">
+					<a onclick="pright()">
+						<i class="far fa-arrow-alt-circle-right"></i>
+					</a>
+			   </div>
+		    </div>       
+        </article>        
+	</section>
+    <!------------>  
+    
+    <!--SOBRE-->
+    <section class="container colorSobre sobre">
+        <article id="sobre2">
+            <h1>            
+            Na Sant' Ana você encontra uma grande variedade de doces, salgados, pães, bolos, tortas salgadas, tortas doces, patês e muitos outros podutos, tudo feito com muito carinho e cuidado. Venha conhecer essas delícias!</h1>
+        </article>
+        <article>  
+            <img src="images/fotos/img3.jpg">
+        </article>
+    </section>
+    <!--------->
+
+    <!--PRODUTOS-->
+		<section class="produtos container corProdutos">
+            <h1 id="produtos2" style="font-size: 250%;">PRODUTOS</h1>
+        
+            <article class="produto" id="confeitaria">            
+                <div class="inner">
+                    <a onclick="conf()"><h3>Confeitaria</h3></a>
+                </div>
+                <a onclick="conf()"><img src="images/fotos/img1.jpg"></a>
+            </article>
+		
+             <article class="produto" id="panificadora">            
+                <div class="inner">
+                    <a onclick="pani()"><h3>Panificadora</h3></a>
+                </div>
+                <a onclick="pani()"><img src="images/fotos/img2.jpg"></a>
+            </article>
+		           
+             <article class="produto" id="lanches">            
+                <div class="inner">
+                    <a onclick="lanc()"><h3>Lanches</h3></a>
+                </div>
+                <a onclick="lanc()"><img src="images/fotos/lanche.jpg"></a>
+            </article>
+	</section>
+	<section class="produtos container corProdutos conf">
+            <article class="prod conf" id="conf1">
+                <img src="images/fotos/torta%20alema.jpg">
+                <div class="inner">
+                    <a href="#"></a>
+                    <h3>Bolo Alemã</h3>
+                </div>
+            </article>
+            <article class="prod conf" id="conf2">
+                <img src="images/fotos/img1.jpg">
+                <div class="inner">
+                    <a href="#"></a>
+                    <h3>Titulo</h3>
+                </div>
+            </article>
+            <article class="prod conf" id="conf3">
+                <img src="images/fotos/img1.jpg">
+                <div class="inner">
+                    <a href="#"></a>
+                    <h3>Titulo</h3>
+                </div>
+            </article>
+            <article class="prod conf" id="conf4">
+                <img src="images/fotos/img1.jpg">
+                <div class="inner">
+                    <a href="#"></a>
+                    <h3>Titulo</h3>
+                </div>
+            </article>
+	</section>
+	
+	<section class="produtos container corProdutos panif"> 
+		<article class="prod panif" id="panif1">
+			<img src="images/fotos/pao%20fatiado.jpg">
+			<div class="inner">
+				<a href="#"></a>
+				<h3>Pão Fatiado</h3>
+			</div>
+		</article>
+		<article class="prod panif" id="panif2">
+			<img src="images/fotos/img2.jpg">
+			<div class="inner">
+				<a href="#"></a>
+				<h3>Titulo</h3>
+			</div>
+		</article>
+		<article class="prod panif" id="panif3">
+			<img src="images/fotos/img2.jpg">
+			<div class="inner">
+				<a href="#"></a>
+				<h3>Titulo</h3>
+			</div>
+		</article>
+		<article class="prod panif" id="panif4">
+			<img src="images/fotos/img2.jpg">
+			<div class="inner">
+				<a href="#"></a>
+				<h3>Titulo</h3>
+			</div>
+		</article>
+	</section >
+	
+	<section class="produtos container corProdutos lanche"> 
+		<article class="prod lanches" id="lanc1">
+			<img src="images/fotos/lanches/mistinho.jpg">
+			<div class="inner">
+				<a href="#"></a>
+				<h3>Mistinho</h3>
+			</div>
+		</article>
+		<article class="prod lanches" id="lanc2">
+			<img src="images/fotos/lanches/enrolado.jpg">
+			<div class="inner">
+				<a href="#"></a>
+				<h3>Enrolado</h3>
+			</div>
+		</article>
+		<article class="prod lanches" id="lanc3">
+			<img src="images/fotos/lanches/trancado.jpg">
+			<div class="inner">
+				<a href="#"></a>
+				<h3>Transado</h3>
+			</div>
+		</article>
+		<article class="prod lanches" id="lanc4">
+			<img src="images/fotos/lanches/empada.jpg">
+			<div class="inner">
+				<a href="#"></a>
+				<h3>Empada</h3>
+			</div>
+		</article>
+		<article class="prod lanches" id="lanc5">
+			<img src="images/fotos/lanches/pao de queijo.jpg">
+			<div class="inner">
+				<a href="#"></a>
+				<h3>Pão de queijo</h3>
+			</div>
+		</article>
+		<article class="prod lanches" id="lanc6">
+			<img src="images/fotos/lanches/pao de batata.jpg">
+			<div class="inner">
+				<a href="#"></a>
+				<h3>Pão de Batata</h3>
+			</div>
+		</article>
+		<article class="prod lanches" id="lanc7">
+			<img src="images/fotos/lanches/Esfira.png">
+			<div class="inner">
+				<a href="#"></a>
+				<h3>Esfira</h3>
+			</div>
+		</article>
+		<article class="prod lanches" id="lanc8">
+			<img src="images/fotos/lanches/calzone.jpg">
+			<div class="inner">
+				<a href="#"></a>
+				<h3>Calzone</h3>
+			</div>
+		</article>
+
+		<article class="prod lanches" id="lanc9">
+			<img src="images/fotos/lanches/pao-pizza.jpg">
+			<div class="inner">
+				<a href="#"></a>
+				<h3>Pão Pizza</h3>
+			</div>
+		</article>
+		<article class="prod lanches" id="lanc10">
+			<img src="images/fotos/lanches/hamburgao.jpg">
+			<div class="inner">
+				<a href="#"></a>
+				<h3>Hamburgão</h3>
+			</div>
+		</article>
+		<article class="prod lanches" id="lanc11">
+			<img src="images/fotos/lanches/pizza folhada.jpg">
+			<div class="inner">
+				<a href="#"></a>
+				<h3>Pizza folhada</h3>
+			</div>
+		</article>
+		<article class="prod lanches" id="lanc12">
+			<img src="images/fotos/lanches/coxinha.jpg">
+			<div class="inner">
+				<a href="#"></a>
+				<h3>Coxinha de Frango</h3>
+			</div>
+		</article>
+	</section>
+
+    
+    <!------------>
+    
+    <!--ENDERECO-->
+    <section class="endereco container colorEndereco" id="contatos2">
+        <article>
+             <h1>Endereço</h1>
+		<div class="map"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=%201526%20R.%20Mal.%20Deodoro%20Conc%C3%B3rdia%2C%20Santa%20Catarina&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
+<!--	www.embedGoogleMap.net-->
+        </article>    
+    </section>
+    
+    <!------------>
+    
+    <!-- RODAPÉ -->
+    <footer class="rodape container colorFooter">
+              
+		<h1 id="contatos2">CONTATENOS E FAÇA SEU PEDIDO VIA WHATSAPP</h1>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/Confeitaria-e-panificadora-santana-175585072823208/" target="_blank" ><img onmouseleave="this.src='images/icones/face-ico1.png'" src="images/icones/face-ico1.png" onmouseover="this.src='images/icones/face-ico2.png'"></a>
+
+            <a href="https://m.me/175585072823208" target="_blank"><img src="images/icones/messe-ico1.png" onmouseleave="this.src='images/icones/messe-ico1.png'" onmouseover="this.src='images/icones/messe-ico2.png'"></a>
+
+            <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5549991632082" 
+            target="_blank"><img src="images/icones/whats-ico1.png" onmouseleave="this.src='images/icones/whats-ico1.png'" onmouseover="this.src='images/icones/whats-ico2.png'"></a>
+        </div>
+		
+    </footer>
+   
+    <div class="_fundo">
+        <div id="confi1" class="config">
+            <i id="btn_confi1" class="far fa-times-circle"></i>
+            <img src="images/fotos/torta%20alema.jpg">
+            <h1>Bolo Alemão</h1>
+            <p>Biscoito tipo Maria, creme de gemas, creme de leite e manteiga. Uma camada de ganache e cobertura de chocolate.</p>
+            <h2>R$:</h2>
+        </div>
+        <div id="confi2" class="config">
+            <i id="btn_confi2" class="far fa-times-circle"></i>
+            <img src="">
+            <h1></h1>
+            <p></p>
+            <h2>R$:</h2>
+        </div>
+        <div id="confi3" class="config">
+            <i id="btn_confi3" class="far fa-times-circle"></i>
+            <img src="images/fotos/torta%20alema.jpg">
+            <h1></h1>
+            <p></p>
+            <h2>R$:</h2>
+        </div>
+        <div id="confi4" class="config">
+            <i id="btn_confi4" class="far fa-times-circle"></i>
+            <img src="images/fotos/torta%20alema.jpg">
+            <h1></h1>
+            <p></p>
+            <h2>R$:</h2>
+        </div>
+        <!----------------------Panificadora------------------------>
+        <div id="pani1" class="config" style="display:none;">
+            <i id="btn_pani1" class="far fa-times-circle"></i>
+            <img src="images/fotos/pao%20fatiado.jpg">
+            <h1>Pão Fatiado</h1>
+            <p>Farinha de trigo especial, gordura vegetal, melhorador de farinha enzimático, água, sal, fermento biológico, conservante propionato de cálcio. ALÉRGICOS: CONTÉM TRIGO. CONTÉM GLÚTEN.</p>
+            <h2>R$:</h2>
+        </div>
+        <div id="pani1" class="config" style="display:none;">
+            <i id="btn_pani1" class="far fa-times-circle"></i>
+            <img src="images/fotos/pao%20fatiado.jpg">
+            <h1></h1>
+            <p></p>
+            <h2>R$:</h2>
+        </div>
+        <div id="pani1" class="config" style="display:none;">
+            <i id="btn_pani1" class="far fa-times-circle"></i>
+            <img src="images/fotos/pao%20fatiado.jpg">
+            <h1></h1>
+            <p></p>
+            <h2>R$:</h2>
+        </div>
+        <div id="pani1" class="config" style="display:none;">
+            <i id="btn_pani1" class="far fa-times-circle"></i>
+            <img src="images/fotos/pao%20fatiado.jpg">
+            <h1></h1>
+            <p></p>
+            <h2>R$:</h2>
+        </div>
+        <!----------------------Lanches------------------------>
+        <div id="lanche1" class="config" style="display:none;">
+            <i id="btn_lanche1" class="far fa-times-circle"></i>
+            <img src="images/fotos/lanches/mistinho.jpg">
+            <h1>Mistinho</h1>
+            <p></p>
+            <h2>R$:2,88</h2>
+        </div>
+        <div id="lanche2" class="config" style="display:none;">
+            <i id="btn_lanche2" class="far fa-times-circle"></i>
+            <img src="images/fotos/lanches/enrolado.jpg">
+            <h1></h1>
+            <p></p>
+            <h2>R$:</h2>
+        </div>
+        <div id="lanche3" class="config" style="display:none;">
+            <i id="btn_lanche3" class="far fa-times-circle"></i>
+            <img src="images/fotos/lanches/trancado.jpg">
+            <h1></h1>
+            <p></p>
+            <h2>R$:</h2>
+        </div>
+        <div id="lanche4" class="config" style="display:none;">
+            <i id="btn_lanche4" class="far fa-times-circle"></i>
+            <img src="images/fotos/lanches/empada.jpg">
+            <h1></h1>
+            <p></p>
+            <h2>R$:</h2>
+        </div>
+        <div id="lanche5" class="config" style="display:none;">
+            <i id="btn_lanche5" class="far fa-times-circle"></i>
+            <img src="images/fotos/lanches/pao de queijo.jpg">
+            <h1></h1>
+            <p></p>
+            <h2>R$:</h2>
+        </div>
+        <div id="lanche6" class="config" style="display:none;">
+            <i id="btn_lanche6" class="far fa-times-circle"></i>
+            <img src="images/fotos/lanches/pao de batata.jpg">
+            <h1></h1>
+            <p></p>
+            <h2>R$:</h2>
+        </div>
+        <div id="lanche7" class="config" style="display:none;">
+            <i id="btn_lanche7" class="far fa-times-circle"></i>
+            <img src="images/fotos/lanches/Esfira.png">
+            <h1></h1>
+            <p></p>
+            <h2>R$:</h2>
+        </div>
+        <div id="lanche8" class="config" style="display:none;">
+            <i id="btn_lanche8" class="far fa-times-circle"></i>
+            <img src="images/fotos/lanches/pedaco-de-calzone.jpg">
+            <h1></h1>
+            <p></p>
+            <h2>R$:</h2>
+        </div>
+        <div id="lanche9" class="config" style="display:none;">
+            <i id="btn_lanche9" class="far fa-times-circle"></i>
+            <img src="images/fotos/lanches/pao-pizza.jpg">
+            <h1></h1>
+            <p></p>
+            <h2>R$:</h2>
+        </div>
+        <div id="lanche10" class="config" style="display:none;">
+            <i id="btn_lanche10" class="far fa-times-circle"></i>
+            <img src="images/fotos/lanches/hamburgao.jpg">
+            <h1></h1>
+            <p></p>
+            <h2>R$:</h2>
+        </div>
+        <div id="lanche11" class="config" style="display:none;">
+            <i id="btn_lanche11" class="far fa-times-circle"></i>
+            <img src="images/fotos/lanches/pizza folhada.jpg">
+            <h1></h1>
+            <p></p>
+            <h2>R$:</h2>
+        </div>
+        <div id="lanche12" class="config" style="display:none;">
+            <i id="btn_lanche12" class="far fa-times-circle"></i>
+            <img src="images/fotos/lanches/coxinha.jpg">
+            <h1></h1>
+            <p></p>
+            <h2>R$:</h2>
+        </div>g
+
+    </div>
+	
+</body>
+</html>
+<!--https://icons8.com.br ICONES-->

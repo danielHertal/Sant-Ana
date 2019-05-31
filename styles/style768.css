@@ -1,0 +1,170 @@
+#btn-menu{
+	font-size: 8vw;
+	display: block;
+	padding: 2vw;
+	background: none;
+	float: right;
+	margin-right: 4vw;
+	margin-top: 1vw;
+}
+#btn-fechar{
+	display: block;
+	font-size: 10vw;
+	padding: 2vw;
+	background: none;
+	float: right;
+	margin-right: 4vw;
+	margin-top: 1vw;
+}
+.cabecalho{
+	width: 100vw;
+}
+.container{
+	padding: 0;
+}
+#menu{
+	width: 100vw !important; 
+	height: 200vw !important; 
+	position: fixed;
+	background-color: rgba(200,200,200,0.8);
+	margin-top: 0vw !important;
+	left: 0vw;
+	margin-top: -0vw;
+}
+#menu ul{
+	width: 90vw;
+	float: left;
+	text-align: center;
+	margin-left: 5vw;
+}
+#menu ul li{
+	margin-top: 1vw;
+	display: block;
+	padding: 3vw;
+	border: solid 7px;
+	background-color: rgba(200,200,200,1);
+}
+#menu li a{
+	font-size: 2.5em;
+	color: Black;
+}
+#menu li a:hover { 
+color: #272727; 
+background-color: rgba(200,200,200,1) 
+}
+.banner{
+	margin-top: 10vw !important;
+	width: 100vw;
+	height: 50vw;
+}
+.sobre{
+	width: 100vw;
+}
+.sobre article{float: block; width: 100%;}
+#sobre2{
+	width: 100vw;
+}
+.sobre h1{
+width: 15vw;
+	margin-left: 45vw;
+	margin-top: 10%;
+	text-align: center;
+	font-weight: 800;
+	font-size: 150%;
+}
+.sobre p{
+	font-size: 140% !important; 
+	width: 80vw;
+	margin-left: 10vw;
+}
+.sobre img{
+	margin-left: 7vw;
+	width: 90vw;
+	margin-bottom: 15vw !important;
+}
+.wrapper{
+	width: 100vw;
+	margin: 0 auto;/*Margin top e botton 0 auto direita e esquerda*/
+	padding: 0;
+}
+.produtos{
+	margin-bottom: 3vw;
+	margin-bottom: 10vw;
+	height: auto;
+}
+.produtos h1{
+	margin-top: 5vw;
+	text-align: center;
+	font-weight: 800;
+	font-size: 150vw;
+}
+.produtos h3{
+	font-size: 3vw;
+}
+.produtos article{
+	padding: 0;
+	width: 25%;  
+	margin-top: 3%;
+	text-align: center;
+	margin-left: 5vw;
+}
+.produtos img { 
+	width: 60%;
+	border: solid 0.5vw black;
+	border-radius: 7px ;
+	margin-bottom: 3vw; 
+}
+.endereco{
+	width: 100%;
+}
+.endereco h1{
+	text-align: center;
+	font-weight: 800;
+	font-size: 150%;
+	margin-top: 5vw;
+	margin-bottom: 2vw;
+}
+.map{
+	margin-top: 2%;
+	margin-left: 10vw;
+	width: 78vw;
+}
+.map iframe{
+	width: 80vw;
+}
+.mapouter{
+	position:relative;
+	text-align:right;
+	height:500px;
+	width:80vw;
+}
+.gmap_canvas{
+	overflow:hidden;
+	background:none!important;
+	height:500px;
+	width:80vw!important;
+}
+footer{
+	margin-top: 3vw;
+	margin-bottom: 2vw;
+}
+.social-icons{
+	margin-top: 1vw;
+	margin-bottom: 2vw;
+}
+#btn-fechar i{
+	color: white;}
+.produtos{
+	margin-bottom: 1vw;	
+}
+.produto img{
+	height: 15vw;
+	width: 20vw;
+}
+.prod{
+	height: 25vw;
+}
+.prod img{
+	width: 15vw;
+	height: 10vw;
+}
